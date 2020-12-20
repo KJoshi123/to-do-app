@@ -8,8 +8,9 @@ var app = express();
 var urlEncodedParser = bodyParser.urlencoded({extended: false});
 
 //starting port
-app.listen(3000);
-console.log("Server is listnining at : 3000");
+var port_number = app.listen(process.env.PORT || 3000);
+app.listen(port_number);
+console.log("Server is listnining at : "+port_number);
 
 
 app.set('view engine', 'ejs');
