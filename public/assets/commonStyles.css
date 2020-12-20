@@ -1,0 +1,38 @@
+.header{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    background-color: #090d13;
+    min-height: 50px;
+    font-size: large;
+    background-position-y: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    font-style: italic, initial;
+    margin-bottom: 50px;
+    z-index: 999;
+}
+
+.header img{
+    height: 100px;
+}
+body{
+    background: #0d1521;
+    font-family: tahoma;
+    color: #989898;
+}
+footer{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    background-color: #090d13;
+    min-height: 50px;
+    font-size: small;
+    background-position-y: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}

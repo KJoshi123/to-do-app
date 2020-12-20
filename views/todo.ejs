@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>TO-DO App</title>
+        <link href="/assets/mainStyle.css" rel="stylesheet" type="text/css">
+        <link href="/assets/commonStyles.css" rel="stylesheet" type="text/css">
+        <!--Jquery scripts-->
+        <!--https://todo-app-f4bfc.web.app/-->
+        <script  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <%- include ('subViews/header'); %>
+       <div id="todo-table">
+        <form>
+            <input type="text" name="taskName" placeholder="What's on mind">
+            <input type="text" name="description" placeholder="description">
+            <input type="date" name="deadline" placeholder="when to finish">
+            <button type="submit">submit</button>
+        </form>
+       </div>
+       <div style="width: 90%;">
+       <div class="todolist-container">
+           <h1 style="text-align: center;"> Tasks to complete</h1>
+        <% for(var i=0; i<notdonedata.length; i++){ %>
+            <div class="todo-elements" id = '<%= i %>'>
+                <p name="task"><b><%= notdonedata[i].taskName %></b></p>
+                <p name="desc"><%= notdonedata[i].description %></p>
+                <sub name="date">To be completed at : <%= notdonedata[i].deadline %></sub>
+                <button type="button" class="deletetask" id = '<%= notdonedata[i].taskName %>'  onclick="deleteItem(this.id)">Delete Taks</button>
+                <button type="button" class="completedtask" id = '<%= notdonedata[i].taskName %>' onclick="doneItem(this.id)">Completed</button>                
+            </div>
+           <% } %>
+       </div>
+       <div class="todolist-notdone-container">
+        <h1 style="text-align: center;"> Tasks completed</h1>
+        <% for(var i=0; i<donedata.length; i++){ %>
+            <div class="todo-elements-done" id='<%= i %>'>
+                <p name="task"><b><%= donedata[i].taskName %></b></p>
+                <p name="desc"><%= donedata[i].description %></p>
+                <sub name="date">Needed to complete by : <%= donedata[i].deadline %></sub>
+                <br>
+                <sub name="date">Completed on : <%= donedata[i].completedAt%></sub>
+            </div>
+           <% } %>
+       </div>
+       </div>
+        <%- include ('subViews/footer'); %>
+
+        <script src="/assets/scripts/todoServerjs.js"></script>
+    </body>
+    
+</html>

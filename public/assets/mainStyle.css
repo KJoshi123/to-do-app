@@ -1,0 +1,187 @@
+#todo-table{
+    position: relative;
+    width: 95%;
+    background: darkslategray;
+    margin-top: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#todo-table form:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+    margin: 3px;
+}
+
+input[type="date"]{
+    width: 100%;
+    padding: 20px;
+    background:#181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+    margin: 3px;
+}
+
+button{
+    padding: 20px;
+    width: 50%;
+    margin-left: 25%;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 2%;
+    align-self: center;
+    margin-top: 3px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+li:hover{
+    text-decoration: line-through;
+    background: rgba(0,0,0,0.2);
+}
+.mainForm{
+    background-color: dimgray;
+    color: black;
+    display: block;
+    align-self: center;
+    padding-top: inherit;
+}
+.todo-elements{
+    position: relative;
+    width: 100%;
+    background: #090d13;
+    margin-top: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+}
+.todo-elements p{
+    position: relative;
+    width: 80%;
+    background: #090d13;
+    margin-top: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: floralwhite;
+}
+
+.todo-elements sub{
+    position: relative;
+    width: 80%;
+    background: #090d13;
+    padding: 5px;
+    box-sizing: border-box;
+    color: floralwhite;
+}
+
+.deletetask{
+    width: 20%;
+    margin-left: 10%;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 2%;
+    align-self: center;
+    float: top;
+}
+.deletetask:hover{
+    background-color: lightcoral;
+    color: black;
+}
+
+.completedtask{
+    width: 20%;
+    margin-left: 10%;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 2%;
+    align-self: center;
+    float: top;
+}
+
+.completedtask:hover{
+    background-color: lightseagreen;
+    color:black;
+}
+
+.todolist-container{
+    width: 50%;
+    box-sizing: content-box;
+    position: absolute;
+}
+
+.todolist-notdone-container{
+    width: 50%;
+    float: right;
+    margin-top: 0px;
+    box-sizing: content-box;
+    position: relative;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.todo-elements-done{
+    width: 80%;
+    background: #090d13;
+    margin-top: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: auto;
+}
+.todo-elements-done p{
+    position: relative;
+    width: 80%;
+    background: #090d13;
+    margin-top: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: floralwhite;
+}
+
+.todo-elements-done sub{
+    position: relative;
+    width: 80%;
+    background: #090d13;
+    box-sizing: border-box;
+    color: floralwhite;
+}
