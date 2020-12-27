@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { isEmail } = require('validator');
+const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
     email:{
@@ -15,6 +16,13 @@ const UserSchema = new mongoose.Schema({
         maxlength:[15, 'maximum length of password allowed is 15 char'],
         required:[true, 'please enter password']
     }
+});
+
+UserSchema.pre('save', async function(next){
+    console.log(this);
+    const salt = await bcrypt.genSalt();
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
 });
 
 const User = mongoose.model('user', UserSchema);
