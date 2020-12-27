@@ -1,21 +1,11 @@
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const todo = require('../models/to-do-list-schema');
 
-var dbConnectionString = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.8zzqt.mongodb.net/to-do-application?retryWrites=true&w=majority'
-mongoose.connect(dbConnectionString, { useNewUrlParser : true, useUnifiedTopology:true });
-console.log('Connected with database');
 
 var urlEncodedParser = bodyParser.urlencoded({extended: false});
 
-var todoListSchema = new mongoose.Schema({ 
-    taskName:String, 
-    description:String, 
-    deadline:{type: Date },
-    isCompleted:{type: Boolean, default: false},
-    completedAt: {type: Date, default:null}
-}); 
 
-var todo = mongoose.model('todo', todoListSchema);
 //var item = todo({id:1,taskName:"code",description:"code the node", isCompleted: false}).save();
 
 module.exports = function(app){
