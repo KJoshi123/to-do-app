@@ -1,0 +1,23 @@
+.formClass{
+    margin: 300px 300px auto auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border:solid;
+    width: fit-content;
+}
+.formClass input{
+    height: 30px;
+    width: 100%;
+    margin: 10px 10px 0px 0px;
+    border-radius: 5px;
+}
+.formClass button{
+    margin: 5px 40% 0px;
+    height: 30px;
+    width: 100px;
+    border-radius: 8px;
+    background: #23282e;
+    color: white;
+    font-family: monospace;
+}

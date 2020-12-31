@@ -1,11 +1,22 @@
 <html>
     <head>
         <title>Sign Up</title>
+        <!--Styles-->
         <link href="/assets/commonStyles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/loginSignup.css" type="text/css">
+        <!--Scrips-->
+        <script  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
     <body>
         <%- include('subViews/header'); -%>
-            
+        <div class="formclass">
+            <form action="" class="sign">
+                <input type="text" placeholder="email address" name="email" id="name">
+                <input type="password" name="password" placeholder="password"id="password">
+                <button class="submit">SUBMIT</button>
+            </form>
+        </div>
         <%- include ('subViews/footer'); %>
+        <script src="/assets/scripts/signup.js"></script>
     </body>
 </html>

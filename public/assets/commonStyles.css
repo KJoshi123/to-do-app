@@ -13,6 +13,7 @@
     font-style: italic, initial;
     margin-bottom: 50px;
     z-index: 999;
+    flex: auto;
 }
 
 .header img{
