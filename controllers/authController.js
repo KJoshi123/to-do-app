@@ -42,7 +42,7 @@ module.exports = function(app){
         }
         catch(err){
             const error = errorHandler(err);
-            //console.log(err, err.code);
+            console.log(err, err.code);
             response.status(400).json({ error });
         }
         
