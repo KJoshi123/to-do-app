@@ -5,26 +5,14 @@ $(document).ready(function(){
         const password = $("#password").val();
         console.log("username : ", username, " password: ",password);
 
-        /*$.ajax({
-            type: 'POST',
-            url: '/signup',
-            contentType: 'application/json',
-            async: true,
-            data: { email, password},
-            success: function(data){
-                console.log(data);
-            },
-            fail: function(data){
-                console.log(data);
-            }
-        });*/
-
         try{
             const res = await fetch('/signup', {
                 method:'POST',
-                body:{ email: email, password: password}
+                body:{ email: email, password: password},
+                headers: { 'Content-Type' : 'application/json'}
             });
-            console.log(res);
+            const response = await res.json();
+            console.log(response);
         }
         catch(error){
             console.log(error)
