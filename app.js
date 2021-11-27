@@ -3,11 +3,12 @@ const mongoose = require('mongoose');
 const HomeController = require('./controllers/HomeController');
 const TodoController = require('./controllers/TodoController');
 const authController = require('./controllers/authController');
+require('dotenv').config({path: __dirname + '/.env'});
 
 //declaring cofiguration variables
 var app = express();
 
-var dbConnectionString = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.8zzqt.mongodb.net/to-do-application?retryWrites=true&w=majority'
+var dbConnectionString = process.env.MONGODB_URL;
 mongoose.connect(dbConnectionString, { useNewUrlParser : true, useUnifiedTopology:true, useCreateIndex:true })
 .then((val) => {
     //starting port
